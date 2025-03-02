@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { RiHome7Line, RiHome7Fill, RiFileList2Fill } from 'react-icons/ri'
 import { BiHash } from 'react-icons/bi'
 import { HiOutlineMail, HiMail } from 'react-icons/hi'
-import { FaRegListAlt, FaHashtag, FaBell } from 'react-icons/fa'
+import { FaRegListAlt, FaHashtag} from 'react-icons/fa'
 import { CgMoreO } from 'react-icons/cg'
 import { BsBookmarkFill, BsBookmark, BsPersonFill, BsPerson } from 'react-icons/bs'
 
