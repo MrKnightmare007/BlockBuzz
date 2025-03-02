@@ -20,15 +20,15 @@ interface SidebarOptionProps {
 function SidebarOption({ Icon, text, isActive, setSelected, redirect }: SidebarOptionProps) {
   const router = useRouter()
 
-  const handleClick = () => {
-    setSelected(text)
-    if (redirect) {
-      router.push(redirect) // Navigate to the redirect URL if provided
-    }
-  }
-
   return (
-    <div className={style.wrapper} onClick={handleClick}>
+    <div 
+      className={style.wrapper} 
+      onClick={()=>{
+        setSelected(text)
+        if (redirect) {
+          router.push(redirect);
+        }
+      }}>
       <div className={style.iconContainer}>
         <Icon />
       </div>
