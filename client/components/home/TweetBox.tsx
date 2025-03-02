@@ -40,7 +40,7 @@ const TweetBox = () => {
         <form>
           <textarea
             className={style.inputField}
-            placeholder="What's happening?"
+            placeholder="Drop a Buzz !!!"
             value={tweetMessage}
             onChange={(e) => setTweetMessage(e.target.value)} 
           />
@@ -59,7 +59,7 @@ const TweetBox = () => {
               onClick={(event) => postTweet(event)}
               className={`${style.submitGeneral} ${tweetMessage ? style.activeSubmit : style.inactiveSubmit}`} 
             >
-              Tweet
+              Buzz
             </button>
           </div>
         </form>
