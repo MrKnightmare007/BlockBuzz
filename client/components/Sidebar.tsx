@@ -91,7 +91,7 @@ function Sidebar({initialSelectedIcon = 'Home'}) {
         <div className={style.profileRight}>
           <div className={style.details}>
             <div className={style.name}>das_besondere</div>
-            <div className={style.handle}>@0x22dF65545115545xf2df</div>
+            <div className={style.handle}>{`${"0xd9eCAcA55e36269CCa917228751e0Cc322b5218D".slice(0, 6)}...${"0xd9eCAcA55e36269CCa917228751e0Cc322b5218D".slice(-4)}`}</div>
           </div>
           <div className={style.moreContainer}>
             <FiMoreHorizontal />
