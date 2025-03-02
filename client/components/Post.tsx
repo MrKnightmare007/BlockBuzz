@@ -54,22 +54,22 @@ function Post({ displayName, username, avatar, text, isProfileImageNFT, timestam
           <div className={style.tweet}>{text}</div>
           <div className={style.footer}>
           <div
-            className={`${style.footerIcon} hover:text-[#1d9bf0] hover:bg-[#1e364a]`}
+            className={`${style.footerIcon} hover:text-[#1d9bf0] hover:bg-[#1e364a] cursor-pointer`}
           >
             <FaRegComment />
           </div>
           <div
-            className={`${style.footerIcon} hover:text-[#03ba7c] hover:bg-[#1b393b]`}
+            className={`${style.footerIcon} hover:text-[#03ba7c] hover:bg-[#1b393b] cursor-pointer`}
           >
             <FaRetweet />
           </div>
           <div
-            className={`${style.footerIcon} hover:text-[#f91c80] hover:bg-[#39243c]`}
+            className={`${style.footerIcon} hover:text-[#f91c80] hover:bg-[#39243c] cursor-pointer`}
           >
             <AiOutlineHeart />
           </div>
           <div
-            className={`${style.footerIcon} hover:text-[#1d9bf0] hover:bg-[#1e364a]`}
+            className={`${style.footerIcon} hover:text-[#1d9bf0] hover:bg-[#1e364a] cursor-pointer`}
           >
             <FiShare />
           </div>
