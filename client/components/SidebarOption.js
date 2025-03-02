@@ -7,7 +7,7 @@ const style = {
     textActive: `font-bold`,
 }
 
-function SidebarOption({ Icon, text, isActive, setSelected, redirect }) {
+function SidebarOption({ Icon, text, isActive, setSelected }) {
   return (
     <div
         className={style.wrapper}
