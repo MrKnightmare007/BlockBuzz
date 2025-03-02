@@ -7,7 +7,15 @@ const style = {
     textActive: `font-bold`,
 }
 
-function SidebarOption({ Icon, text, isActive, setSelected }) {
+interface SidebarOptionProps {
+    Icon: React.ComponentType;
+    text: string;
+    isActive: boolean;
+    setSelected: (text: string) => void;
+    redirect?: string;
+}
+
+function SidebarOption({ Icon, text, isActive, setSelected, redirect }: SidebarOptionProps) {
   return (
     <div
         className={style.wrapper}
