@@ -3,8 +3,8 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 
 
-import {userSchema} from './schemas/userSchema'
-import {tweetSchema} from './schemas/tweetSchema'
+import {userSchema} from './schemaTypes/userSchema'
+import {tweetSchema} from './schemaTypes/tweetSchema'
 
 export default defineConfig({
   name: 'default',
