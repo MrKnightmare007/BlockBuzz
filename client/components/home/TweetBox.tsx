@@ -1,3 +1,4 @@
+'use client'
 import { useState, useContext } from 'react'
 import { TwitterContext } from '../../context/TwitterContext'
 import { BsCardImage, BsEmojiSmile } from 'react-icons/bs'
