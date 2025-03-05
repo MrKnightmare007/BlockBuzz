@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { client } from '../lib/client'
 
 export const TwitterContext = createContext()
