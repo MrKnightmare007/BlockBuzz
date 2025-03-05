@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/client": "^6.28.2",
     "next": "15.1.7",
     "prettier": "^3.5.2",
     "react": "^19.0.0",

@@ -68,6 +68,7 @@ const Home = () => {
           target='_blank'
           rel='noreferrer'
           href={`https://metamask.io/download.html`}
+          className={style.loginContent}
         >
           You must install Metamask, a <br /> virtual Ethereum wallet, in your
           browser.

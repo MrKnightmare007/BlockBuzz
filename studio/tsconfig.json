@@ -6,12 +6,14 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "Preserve",
+    "module": "esnext",
     "moduleDetection": "force",
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "outDir": "./dist",
+    "noEmit": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "schemas/schema.js", "schemaTypes/tweetSchema.jsschemaTypes/userSchema.jsa.js", "schemaTypes/index.ts", "sanity.config.js"],
   "exclude": ["node_modules"]
 }
