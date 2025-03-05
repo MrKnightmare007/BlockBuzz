@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { FiMoreHorizontal } from 'react-icons/fi'
 import { VscTwitter } from 'react-icons/vsc'
 import SidebarOption from './SidebarOption'
@@ -29,6 +30,7 @@ const style = {
 
 function Sidebar({initialSelectedIcon = 'Home'}) {
   const [selected, setSelected] = useState(initialSelectedIcon)
+  const router = useRouter()
   return (
     <div className={style.wrappper}>
       <div className={style.twitterIconcontainer}>
