@@ -23,8 +23,7 @@ const style = {
 
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState('')
-  const { currentAccount, fetchTweets, currentUser } =
-    useContext(TwitterContext)
+  const { currentAccount, fetchTweets, currentUser } = useContext(TwitterContext)
 
   const submitTweet = async (event: any) => {
     event.preventDefault()
@@ -99,7 +98,7 @@ function TweetBox() {
                 tweetMessage ? style.activeSubmit : style.inactiveSubmit
               }`}
             >
-              Tweet
+              Buzz
             </button>
           </div>
         </form>

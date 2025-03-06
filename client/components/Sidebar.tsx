@@ -1,7 +1,9 @@
 'use client'
-import React from 'react'
+import React, { use } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useContext } from 'react'
+import { TwitterContext } from '@/context/TwitterContext'
 import { FiMoreHorizontal } from 'react-icons/fi'
 import { VscTwitter } from 'react-icons/vsc'
 import SidebarOption from './SidebarOption'
@@ -30,6 +32,7 @@ const style = {
 
 function Sidebar({initialSelectedIcon = 'Home'}) {
   const [selected, setSelected] = useState(initialSelectedIcon)
+  const {currentAccount, currentUser, tweets} = useContext(TwitterContext)
   const router = useRouter()
   return (
     <div className={style.wrappper}>
@@ -87,14 +90,25 @@ function Sidebar({initialSelectedIcon = 'Home'}) {
           redirect = {'/profile'}
         />
         <SidebarOption Icon={CgMoreO} text='More' isActive={false} setSelected={setSelected} />
-        <div className={style.tweetButton}>Mint</div>
+        <div onClick={() => {router.push(`/?mint=${currentAccount}`)}}
+         className={style.tweetButton}>Mint</div>
       </div>
       <div className={style.profileButton}>
-        <div className={style.profileLeft}></div>
+        <div className={style.profileLeft}>
+        <img
+            src={currentUser.profileImage}
+            alt='profile'
+            className={
+              currentUser.isProfileImageNft
+                ? `${style.profileImage} smallHex`
+                : style.profileImage
+            }
+          />
+        </div>
         <div className={style.profileRight}>
           <div className={style.details}>
-            <div className={style.name}>das_besondere</div>
-            <div className={style.handle}>{`${"0xd9eCAcA55e36269CCa917228751e0Cc322b5218D".slice(0, 6)}...${"0xd9eCAcA55e36269CCa917228751e0Cc322b5218D".slice(-4)}`}</div>
+            <div className={style.name}>{currentUser.name}</div>
+            <div className={style.handle}>{`${currentAccount.slice(0, 6)}...${currentAccount.slice(-4)}`}</div>
           </div>
           <div className={style.moreContainer}>
             <FiMoreHorizontal />
